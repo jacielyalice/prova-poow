@@ -8,13 +8,13 @@ $qtd_participantes = $_POST['qtd_participantes'];
 $data_reuniao = $_POST['data_reuniao'];
 $hora_reuniao = $_POST['hora_reuniao'];
 
-$stmt = $conn->prepare('insert into agendamentos(nome_organizador,numero_particpantes,assunto,data,hora,sala_id) values(:nome_organizador,:numero_particpantes,:assunto,:data,:hora,:sala_id)');
+$stmt = $conn->prepare('insert into agendamentos(nome_organizador,numero_participantes,assunto,data,horario,sala_id) values(:nome_organizador,:numero_participantes,:assunto,:data,:horario,:sala_id)');
 $stmt->execute(array(
     ':nome_organizador'=>$organizador,
-    ':numero_particpantes'=>$qtd_participantes,
+    ':numero_participantes'=>$qtd_participantes,
     ':assunto'=>$assunto,
     ':data' => $data_reuniao,
-    ':hora' => $hora_reuniao,
+    ':horario' => $hora_reuniao,
     ':sala_id' => $sala_id
 ));
 $data_update = [

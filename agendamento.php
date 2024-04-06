@@ -1,7 +1,7 @@
 <?php
 include './actions/config.php';
 
-$stmt = $conn->query("SELECT s.id, s.nome_sala FROM salas s WHERE s.status = 'disponivel' ORDER BY s.nome_sala DESC");
+$stmt = $conn->query("SELECT s.id, s.nome_sala FROM salas s WHERE s.status = 'disponivel' ORDER BY s.nome_sala");
 $salas = $stmt->fetchAll();
 ?>
 
@@ -17,7 +17,8 @@ $salas = $stmt->fetchAll();
     <form class="row g-3" method="POST" action="./actions/agendamento.php">
     <div class="col-md-4">
             <label for="sala" class="form-label">Salas Disponiveis</label>
-            <select name="sala" id="sala" class="form-select">
+            <select required name="sala" id="sala" class="form-select">
+                <option value="">Selecione uma sala</option>
                 <?php if($salas) : ?>
                     <?php 
                     foreach ($salas as $sala) {
@@ -31,24 +32,24 @@ $salas = $stmt->fetchAll();
         </div>
         <div class="col-12">
             <label for="organizador" class="form-label">Nome Organizador</label>
-            <input type="text" name="organizador" class="form-control" id="organizador">
+            <input required type="text" name="organizador" class="form-control" id="organizador">
         </div>
         <div class="col-12">
             <label for="assunto" class="form-label">Assunto da reunião</label>
-            <input name="assunto" type="text" class="form-control" id="assunto">
+            <input required name="assunto" type="text" class="form-control" id="assunto">
         </div>
         <div class="col-12">
             <label for="qtd_participantes" class="form-label">Numero de Participantes</label>
-            <input name="qtd_participantes" type="number" class="form-control" id="qtd_participantes">
+            <input required name="qtd_participantes" type="number" class="form-control" id="qtd_participantes">
         </div>
         <div class="col-md-6">
             <label for="data_reuniao" class="form-label">Data</label>
-            <input name="data_reuniao" type="date" class="form-control" id="data_reuniao">
+            <input required name="data_reuniao" type="date" class="form-control" id="data_reuniao">
         </div>
         <div class="col-md-4">
             <label for="hora_reuniao" class="form-label">horário</label>
-            <select name="hora_reuniao" id="hora_reuniao" class="form-select">
-                <option selected>Escolher Horário</option>
+            <select required name="hora_reuniao" id="hora_reuniao" class="form-select">
+                <option value="" selected>Escolher Horário</option>
                 <option value="13:30">13:30</option>
                 <option value="14:30">14:30</option>
                 <option value="16:00">16:00</option>
