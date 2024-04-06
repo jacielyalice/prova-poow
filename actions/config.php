@@ -2,8 +2,8 @@
 
 $servername="lacolhost";
 $username= "root";
-$passwod= "";
-$dbname= "prova";
+$password= "";
+$dbname= "sistema-reuniao";
 
 try{
     $conn= new PDO("mysql:horst=$servername;dbname=$dbname", $username,$password);

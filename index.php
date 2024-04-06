@@ -8,10 +8,10 @@
 <div class="container">
     <div class="d-flex justify-content-between mt-5">
         <div>
-            <h4>Consultas Agendadas</h4>
+            <h4>Salas Agendadas</h4>
         </div>
         <div>
-            <a href="adicionar.php" class="btn btn-primary">Adicionar</a>
+            <a href="agendamento.php" class="btn btn-primary">Agendar Sala</a>
         </div>
 
     </div>
@@ -22,10 +22,8 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Nome</th>
+                    <th>Nome do organizador</th>
                     <th>Email</th>
-                    <th>CPF</th>
-                    <th>Telefone</th>
                     <th>Data</th>
                     <th>Horário</th>
                 </tr>
@@ -44,46 +42,8 @@
                         <button class="btn btn-danger">Excluir</button>
                     </td>
                 </tr>
-                <tr>
-                    <td>Nome</td>
-                    <td>Email</td>
-                    <td>CPF</td>
-                    <td>Telefone</td>
-                    <td>Data</td>
-                    <td>Horário</td>
-                    <td>
-                        <button class="btn btn-primary">Editar</button>
-                        <button class="btn btn-danger">Excluir</button>
-                    </td>
-                <tr>
-                    <td>Nome</td>
-                    <td>Email</td>
-                    <td>CPF</td>
-                    <td>Telefone</td>
-                    <td>Data</td>
-                    <td>Horário</td>
-                    <td>
-                        <button class="btn btn-primary">Editar</button>
-                        <button class="btn btn-danger">Excluir</button>
-                    </td>
-                <tr>
-                    <td>Nome</td>
-                    <td>Email</td>
-                    <td>CPF</td>
-                    <td>Telefone</td>
-                    <td>Data</td>
-                    <td>Horário</td>
-                    <td>
-                        <button class="btn btn-primary">Editar</button>
-                        <button class="btn btn-danger">Excluir</button>
-                    </td>
-
-
-                </tr>
             </body>
         </table>
-
     </div>
 
-   
-    <?php include './layout/header.php'; ?>
+    <?php include './layout/footer.php'; ?>
